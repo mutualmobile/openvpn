@@ -41,6 +41,10 @@
 
 #include "memdbg.h"
 
+#ifndef SOL_IP
+#define SOL_IP IPPROTO_IP
+#endif
+
 const int proto_overhead[] = { /* indexed by PROTO_x */
   0,
   IPv4_UDP_HEADER_SIZE, /* IPv4 */
